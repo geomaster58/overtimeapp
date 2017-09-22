@@ -5,7 +5,7 @@
  ## Key requirement: company needs documentation that salaried employees did or did not get overtime each week
  
  ## Models
- - Post -> date:date rationale:text
+ X Post -> date:date rationale:text
  X User -> Devise
  X AdminUser -> STI
  
@@ -15,6 +15,6 @@
  - Administrate admin dashboard
  - Email summary to managers for approval
  - Needs to be documented if employee did not log overtime
- - Add full name method
+ X Add full name method
  ## UI:
- Bootstrap -> formatting
+ X Bootstrap -> formatting
