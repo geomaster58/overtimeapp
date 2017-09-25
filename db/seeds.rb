@@ -10,3 +10,4 @@ end
 
 puts "100 posts have been created"
 
+admin = AdminUser.create(email: "admin@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: "George", last_name: "Snow")
