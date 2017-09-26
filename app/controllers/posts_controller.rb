@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :destroy]
+  before_action :set_post, only: [:show, :edit, :destroy, :update]
+
 
   def index 
    @posts = Post.all 
@@ -42,7 +43,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:date, :rationale)
+    params.require(:post).permit(:date, :rationale, :status)
   end
 
   def set_post
