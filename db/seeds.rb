@@ -4,7 +4,7 @@ puts "1 user created"
 
 100.times do |post|
 
-Post.create!(date: Date.today, rationale: "#{post+1} rational", user_id: @user.id)
+Post.create!(date: Date.today, rationale: "#{post+1} rational", user_id: @user.id, overtime_request: 2.5)
 
 end
 
