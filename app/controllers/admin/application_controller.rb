@@ -15,7 +15,7 @@ module Admin
 
     def authenticate_admin
       unless Admin.admin_types.include?(current_user.try(:type))
-        flash[:alert] = "Dude you cant go here!"
+        flash[:notice] = "Dude you cant go here!"
         redirect_to(root_path)
       end
     end
