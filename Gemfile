@@ -37,3 +37,5 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'gritter', '~> 1.2'
 gem 'bourbon'
 gem 'pundit', '~> 1.1'
+gem 'twilio-ruby', '~> 5.2', '>= 5.2.3'
+gem 'dotenv-rails' , :groups => [:development, :test]
