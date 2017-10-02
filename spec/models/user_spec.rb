@@ -14,6 +14,12 @@ RSpec.describe User, type: :model do
     it "can not be created without first name and last name" do
       @user.first_name = nil
       @user.last_name = nil
+      @user.phone = nil
+      expect(@user).to_not be_valid
+    end
+
+    it 'requires the phone attr to only contain integers' do
+      @user.phone = 'mygreatstr'
       expect(@user).to_not be_valid
     end
   end
