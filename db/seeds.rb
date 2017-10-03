@@ -11,3 +11,9 @@ end
 puts "100 posts have been created"
 
 admin = AdminUser.create(email: "admin@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: "George", last_name: "Snow", phone: "3854397230")
+
+100.times do |audit_log|
+  AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 6.days))
+end
+
+puts "100 audit logs have been created"
