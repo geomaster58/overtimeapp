@@ -1,8 +1,5 @@
-<div class="jumbotron">
-  <h2>Welcome to Our Overtime Tracker</h2>
-  <ul>
-    <li>Use the tabs at the top to navigate around</li>
-    <li>Use the account dropdown to edit your account details</li>
-    <li>Admins can also use the dropdown to access the admin dashboard</li>
-  </ul>
-</div>
+<% if admin_types.include?(current_user.try(:type)) %>
+  <%= render 'admin' %>
+<% else %>
+  <%= render 'employee' %>
+<% end %>
