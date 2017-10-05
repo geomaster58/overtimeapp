@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :destroy, :update, :approve]
-
+  before_action :auth, only: [:edit, :update, :approve]
 
   def index 
     @posts = Post.posts_by(current_user).page(params[:page]).per(10)
@@ -25,11 +25,11 @@ class PostsController < ApplicationController
   end
 
   def edit
-    authorize @post
+    
   end
 
   def update
-    authorize @post
+    
     if @post.update(post_params)
       redirect_to @post, notice: 'Your post was updated successfully'
     else
@@ -43,7 +43,7 @@ class PostsController < ApplicationController
   end
 
   def approve
-    authorize @post
+    
     @post.approved!
     redirect_to root_path, notice: "The post has been approved"
   end
@@ -58,4 +58,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def auth
+    authorize @post
+  end
 end
