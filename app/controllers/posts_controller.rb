@@ -25,11 +25,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    
   end
 
   def update
-    
     if @post.update(post_params)
       redirect_to @post, notice: 'Your post was updated successfully'
     else
@@ -43,7 +41,6 @@ class PostsController < ApplicationController
   end
 
   def approve
-    
     @post.approved!
     redirect_to root_path, notice: "The post has been approved"
   end
