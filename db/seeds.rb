@@ -6,7 +6,7 @@ And I know you're saying, 'Oh Bob, you've done it this time.' And you may be rig
 Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to."]
 
  @user = User.create(email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: "Jon", last_name: "Snow", phone: "3854397230")
-
+admin = AdminUser.create(email: "admin@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: "George", last_name: "Snow", phone: "3854397230")
 puts "1 user created"
 
 AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 6.days))
@@ -23,5 +23,5 @@ end
 
 puts "100 posts have been created"
 
-admin = AdminUser.create(email: "admin@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: "George", last_name: "Snow", phone: "3854397230")
+
 
