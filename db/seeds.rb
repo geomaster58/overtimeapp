@@ -1,4 +1,4 @@
- @employee = User.create(email: "test@test.com",
+ @employee = Employee.create(email: "test@test.com",
                     password: "asdfasdf",
                     password_confirmation: "asdfasdf",
                     first_name: "Jon",
